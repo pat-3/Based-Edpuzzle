@@ -3,3 +3,13 @@ This is the gist of "Based-Edpuzzle":
     -Utilizes python so the user has to maintain eyecontact with the screen while the video is running, otherwise it pauses it.
     -Should utilize a pre-built library like this: https://github.com/stepacool/Eye-Tracker
     
+Here are the requirements:
+    -Create an app that plays through a list of .mp4, .avi, .wmv, or youtube videos
+        -UX/UI shows list of videos
+    -Focus: if user 
+        -clicks off of player than the video stops
+        -Disallow fast forwarding
+    -Focus: Eye tracking
+        -if user looks away from screen than player stops
+        -player resumes if user looks back at screen
+    -Connect player to cloud, firebase, aws, or azure. Records user data when video is completed 
