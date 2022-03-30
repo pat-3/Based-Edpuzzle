@@ -1,7 +1,12 @@
 This is the gist of "Based-Edpuzzle":
     -is like Edpuzzle in that its purpose is to make the user watch a video while it is focused on the screen
     -Utilizes python so the user has to maintain eyecontact with the screen while the video is running, otherwise it pauses it.
-    -Should utilize a pre-built library like this: https://github.com/stepacool/Eye-Tracker
+    -Should utilize a pre-built library like this for the eye tracking
+    -Tools we should consider:
+        -https://github.com/justadudewhohacks/face-api.js
+        -https://github.com/stepacool/Eye-Tracker
+        -https://github.com/Mjrovai/OpenCV-Face-Recognition
+
     
 Here are the requirements:
     -Create an app that plays through a list of .mp4, .avi, .wmv, or youtube videos
