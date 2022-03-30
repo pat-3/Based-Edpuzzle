@@ -6,6 +6,9 @@ This is the gist of "Based-Edpuzzle":
         -https://github.com/justadudewhohacks/face-api.js
         -https://github.com/stepacool/Eye-Tracker
         -https://github.com/Mjrovai/OpenCV-Face-Recognition
+    -Videos to run with:
+        -How to build a video player: https://www.youtube.com/watch?v=45sPjuPJ3vs
+        
 
     
 Here are the requirements:
