@@ -11,7 +11,7 @@ class Window(QWidget):
     def __init__(self):
         super().__init__()
         #add a logo as "player.ico" later on
-        self.setWindowIcon(QIcon("player.ico"))
+        self.setWindowIcon(QIcon("onlooker.ico"))
         #add a scraper to pull the video title from youtube later
         self.setWindowTitle("OnLooker - Test")
         self.setGeometry(350,100, 700,500)
@@ -43,7 +43,7 @@ class Window(QWidget):
         
         self.slider = QSlider(Qt.Horizontal)
         self.slider.setRange(0,0)
-        self.slider.sliderMoved.connect(self.set_position())
+        self.slider.sliderMoved.connect(self.set_position)
         
         
         hbox = QHBoxLayout()
