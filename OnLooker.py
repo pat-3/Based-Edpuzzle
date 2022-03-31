@@ -10,15 +10,17 @@ import sys
 class Window(QWidget):
     def __init__(self):
         super().__init__()
-        #add a logo as "player.ico" later on
+        #window icon does not appear to work on mac but this is not suprising
         self.setWindowIcon(QIcon("onlooker.ico"))
         #add a scraper to pull the video title from youtube later
         self.setWindowTitle("OnLooker - Test")
-        self.setGeometry(350,100, 700,500)
+        #use the commented out code if you want to make the window a certain size, or "self.showMaximized()" to make it full screen
+        # self.setGeometry(350,100, 700,500)
+        self.showMaximized()
         
         #Not working, needed for color stylization, can be fixed later.
         p = self.palette()
-        #color should be a tan, hex color code is: #D2B48C
+        #color should be a tan or dark green, hex color code is: #D2B48C
         p.setColor(QPalette.Window, Qt.darkGreen)
         self.setPalette(p)
         
