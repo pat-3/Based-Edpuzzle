@@ -3,6 +3,8 @@ from PyQt5.QtGui import QIcon, QPalette
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
 from PyQt5.QtMultimediaWidgets import QVideoWidget
 from PyQt5.QtCore import Qt, QUrl
+import vlc
+# from gaze_tracking import GazeTracking
 import sys
 
 # YoutubeLink = input(str(What is the video you are trying to watch?))
@@ -13,10 +15,10 @@ class Window(QWidget):
         #window icon does not appear to work on mac but this is not suprising
         self.setWindowIcon(QIcon("onlooker.ico"))
         #add a scraper to pull the video title from youtube later
-        self.setWindowTitle("OnLooker - Test")
+        self.setWindowTitle("OnLooker - A Invasive and Unnessecasry Media Player")
         #use the commented out code if you want to make the window a certain size, or "self.showMaximized()" to make it full screen
-        # self.setGeometry(350,100, 700,500)
-        self.showMaximized()
+        self.setGeometry(350,100, 700,500)
+        # self.showMaximized()
         
         #Not working, needed for color stylization, can be fixed later.
         p = self.palette()
@@ -28,7 +30,9 @@ class Window(QWidget):
         
     def create_player(self):
         
-        self.mediaPlayer = QMediaPlayer(None, QMediaPlayer.VideoSurface)
+        # self.mediaPlayer = QMediaPlayer(None, QMediaPlayer.VideoSurface)
+        
+        self.mediaPlayer = vlc.MediaPlayer(None, QMediaPlayer.VideoSurface)
         
         videowidget = QVideoWidget()
         
@@ -86,7 +90,6 @@ class Window(QWidget):
         if self.mediaPlayer.state() == QMediaPlayer.PlayingState:
                 self.playBtn.setIcon(self.style().standardIcon(QStyle.SP_MediaPause))
                 
-                
         else:
             self.playBtn.setIcon(self.style().standardIcon(QStyle.SP_MediaPlay))
             
@@ -99,6 +102,7 @@ class Window(QWidget):
     def set_position(self, position):
         self.mediaPlayer.setPosition
             
+# class tracker():
         
 app = QApplication(sys.argv)
 window = Window()
